@@ -16,8 +16,8 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="site-v2.css" />
+    <script src="site-v2.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -25,7 +25,7 @@
     <header class="site-header">
       <a class="brand" href="#top" aria-label="The Pediatric Privacy Review home">
         <span class="brand-mark" aria-hidden="true">
-          <img src="logo.png" alt="" />
+          <img src="logo.png" alt="" width="56" height="38" />
         </span>
         <span>
           <strong>The Pediatric</strong>
@@ -69,7 +69,10 @@
           <div class="art-orbit orbit-two"></div>
           <div class="art-card">
             <div class="shield">
-              <img src="logo.png" alt="" />
+              <svg viewBox="0 0 120 140">
+                <path class="shield-body" d="M60 5 10 24v39c0 33 20.8 58.8 50 72 29.2-13.2 50-39 50-72V24L60 5Z" />
+                <path class="shield-heart" d="M60 91 37 69c-14-15 8-32 23-17 15-15 37 2 23 17L60 91Z" />
+              </svg>
             </div>
             <div class="data-pill pill-one"><i></i><span></span><span></span></div>
             <div class="data-pill pill-two"><i></i><span></span></div>
@@ -152,7 +155,10 @@
       <section id="about" class="about-section">
         <div class="about-card">
           <div class="about-icon" aria-hidden="true">
-            <img src="logo.png" alt="" />
+            <svg viewBox="0 0 64 64">
+              <path d="M32 5 11 13v16c0 13.9 8.7 24.8 21 30 12.3-5.2 21-16.1 21-30V13L32 5Z" />
+              <path d="m23 31 6 6 13-14" />
+            </svg>
           </div>
           <div>
             <p class="eyebrow"><span></span> About the review</p>
@@ -177,7 +183,7 @@
     <footer>
       <a class="brand brand-footer" href="#top">
         <span class="brand-mark" aria-hidden="true">
-          <img src="logo.png" alt="" />
+          <img src="logo.png" alt="" width="56" height="38" />
         </span>
         <span><strong>The Pediatric</strong><span>Privacy Review</span></span>
       </a>
