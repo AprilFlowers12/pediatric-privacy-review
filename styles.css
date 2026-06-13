@@ -859,6 +859,16 @@ footer p:last-child {
   text-underline-offset: 4px;
 }
 
+.article-resources {
+  list-style: none;
+  padding-left: 0 !important;
+}
+
+.article-resources li {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+
 .dialog-note {
   margin-top: 35px;
   padding: 18px 20px;
