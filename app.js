@@ -1,5 +1,102 @@
 const articles = [
   {
+    title: "Did the HIPAA Security Rule Update Go Into Effect in May 2026?",
+    date: "June 12, 2026",
+    minutes: 8,
+    tags: ["HIPAA", "SECURITY", "HEALTHCARE PRIVACY"],
+    summary:
+      "Here’s what healthcare organizations need to know about the proposed rule, its current status, and how to prepare.",
+    symbol: "26",
+    background: "#d9e8e5",
+    accent: "#267a6d",
+    content: `
+      <p class="dialog-lede">The healthcare industry has been closely watching the U.S. Department of Health and Human Services (HHS) for updates to the HIPAA Security Rule. With ransomware attacks, healthcare data breaches, and cyber threats continuing to increase, many organizations expected major HIPAA cybersecurity changes to take effect in May 2026.</p>
+      <p>However, there is an important distinction that healthcare privacy and compliance professionals should understand:</p>
+      <blockquote>The HIPAA Security Rule update did not automatically go into effect in May 2026.</blockquote>
+      <p>Instead, May 2026 was the target date HHS had identified for potentially finalizing a proposed rule that would significantly strengthen cybersecurity requirements for organizations that handle electronic protected health information (ePHI).</p>
+
+      <h3>A Quick Background</h3>
+      <p>The current HIPAA Security Rule establishes administrative, physical, and technical safeguards designed to protect electronic protected health information (ePHI).</p>
+      <p>While the Security Rule has been updated over the years, the last major overhaul occurred in 2013 through the HIPAA Omnibus Rule.</p>
+      <p>On January 6, 2025, HHS published a Notice of Proposed Rulemaking (NPRM) titled:</p>
+      <p><em>“HIPAA Security Rule to Strengthen the Cybersecurity of Electronic Protected Health Information.”</em> The proposal was designed to modernize HIPAA requirements and better align them with today’s cybersecurity threats.</p>
+
+      <h3>Why Was an Update Needed?</h3>
+      <p>Healthcare has become one of the most targeted industries for cyberattacks. Large-scale ransomware incidents affecting hospitals, health systems, and business associates have exposed vulnerabilities in existing security programs.</p>
+      <p>According to HHS, the proposed changes aim to:</p>
+      <ul>
+        <li>Strengthen cybersecurity protections</li>
+        <li>Improve consistency across regulated entities</li>
+        <li>Reduce ambiguity in compliance requirements</li>
+        <li>Better align HIPAA with modern cybersecurity frameworks and best practices</li>
+      </ul>
+
+      <h3>Key Proposed Changes</h3>
+      <p>Although the rule is not yet finalized, the proposal contains several significant updates.</p>
+      <ol>
+        <li>
+          <strong>Multi-Factor Authentication (MFA) Would Become Mandatory</strong>
+          <p>Many healthcare organizations already use MFA, but the proposed rule would require it for systems containing ePHI rather than treating it as an optional safeguard.</p>
+        </li>
+        <li>
+          <strong>Encryption Requirements Would Be Strengthened</strong>
+          <p>The proposal would eliminate much of the flexibility organizations currently have regarding encryption decisions and require stronger protections for ePHI both at rest and in transit.</p>
+        </li>
+        <li>
+          <strong>More Detailed Risk Analysis Requirements</strong>
+          <p>OCR has repeatedly cited inadequate risk analyses during enforcement actions. The proposed rule would establish more prescriptive requirements for conducting and documenting security risk assessments.</p>
+        </li>
+        <li>
+          <strong>Formal Incident Response Planning</strong>
+          <p>Organizations would need documented incident response procedures, disaster recovery plans, backup testing, and contingency planning processes.</p>
+        </li>
+        <li>
+          <strong>Annual Reviews and Workforce Training</strong>
+          <p>The proposal would require organizations to review security policies at least annually and provide regular workforce cybersecurity training. New workforce members would need training shortly after receiving access to relevant systems.</p>
+        </li>
+        <li>
+          <strong>Enhanced Vendor Oversight</strong>
+          <p>Business associates and vendors handling ePHI would face more explicit cybersecurity obligations, reflecting the growing role third parties play in healthcare breaches.</p>
+        </li>
+      </ol>
+
+      <h3>So What Happened in May 2026?</h3>
+      <p>As of June 2026, the Security Rule modernization effort remains in the rulemaking process.</p>
+      <p>Several regulatory trackers and industry analysts had projected a May 2026 finalization date, but HHS has not yet issued a final rule implementing these changes. OCR continues reviewing public comments submitted during the rulemaking process.</p>
+      <p>This means:</p>
+      <ul>
+        <li>The current HIPAA Security Rule remains in effect.</li>
+        <li>Covered entities and business associates must continue complying with existing HIPAA requirements.</li>
+        <li>The proposed cybersecurity requirements are not yet enforceable by federal law.</li>
+      </ul>
+
+      <h3>What Should Healthcare Organizations Do Now?</h3>
+      <p>Many of the proposed requirements reflect cybersecurity best practices that regulators already expect to see during investigations and audits.</p>
+      <p>Healthcare organizations should consider:</p>
+      <ul>
+        <li>Conducting a comprehensive Security Risk Analysis</li>
+        <li>Implementing MFA wherever possible</li>
+        <li>Reviewing encryption practices</li>
+        <li>Updating incident response plans</li>
+        <li>Evaluating vendor security controls</li>
+        <li>Testing backups and disaster recovery processes</li>
+        <li>Providing regular workforce cybersecurity training</li>
+      </ul>
+      <p>Organizations that begin preparing now will be in a much stronger position if the final rule is published later in 2026 or beyond.</p>
+
+      <h3>Looking Ahead</h3>
+      <p>The proposed HIPAA Security Rule update represents the most significant cybersecurity modernization effort since the HIPAA Omnibus Rule more than a decade ago. Whether the final version matches the proposal exactly remains uncertain, but the direction is clear: stronger cybersecurity expectations are coming to healthcare.</p>
+      <p>Privacy, compliance, and security teams should continue monitoring OCR announcements and use this time to strengthen their security programs before any new requirements become mandatory.</p>
+
+      <h3>Helpful Resources</h3>
+      <ul class="article-resources">
+        <li><a class="article-source" href="https://www.hhs.gov/hipaa/for-professionals/security/hipaa-security-rule-nprm/index.html" target="_blank" rel="noopener noreferrer">HHS Proposed Security Rule Updates →</a></li>
+        <li><a class="article-source" href="https://www.federalregister.gov/documents/2025/01/06/2024-30983/hipaa-security-rule-to-strengthen-the-cybersecurity-of-electronic-protected-health-information" target="_blank" rel="noopener noreferrer">Federal Register Proposed Rule →</a></li>
+        <li><a class="article-source" href="https://www.hhs.gov/hipaa/for-professionals/security/index.html" target="_blank" rel="noopener noreferrer">HIPAA Security Rule Overview →</a></li>
+      </ul>
+    `,
+  },
+  {
     title: "WHAT’S NEW WITH HIPAA IN 2025",
     date: "September 15, 2025",
     minutes: 5,
@@ -304,7 +401,6 @@ function articleCard(article, index) {
         <div class="card-meta">
           <span class="card-tag">${primaryTag}</span>
           <span>${article.date}</span>
-          <span>${article.minutes} min read</span>
         </div>
         <h3>${article.title}</h3>
         <p>${article.summary}</p>
@@ -332,7 +428,6 @@ function openArticle(index) {
       <div class="dialog-meta">
         <span>${article.tags.join(" · ")}</span>
         <span>${article.date}</span>
-        <span>${article.minutes} min read</span>
       </div>
       <h2>${article.title}</h2>
     </header>
