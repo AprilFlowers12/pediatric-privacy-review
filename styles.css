@@ -105,25 +105,16 @@ button {
 
 .brand-mark {
   display: grid;
-  width: 42px;
+  width: 56px;
   height: 42px;
   place-items: center;
-  border-radius: 50%;
-  background: var(--ink);
 }
 
-.brand-mark svg {
-  width: 27px;
-  fill: none;
-  stroke: white;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 2.4;
-}
-
-.brand-mark svg path:first-child {
-  fill: white;
-  fill-opacity: 0.08;
+.brand-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 5px rgba(23, 61, 53, 0.2));
 }
 
 .site-nav {
@@ -278,19 +269,14 @@ h1 em,
 }
 
 .shield {
-  width: 158px;
+  width: min(270px, 75%);
 }
 
-.shield svg {
+.shield img {
+  display: block;
   width: 100%;
-}
-
-.shield-body {
-  fill: var(--ink);
-}
-
-.shield-heart {
-  fill: var(--coral);
+  height: auto;
+  filter: drop-shadow(0 18px 25px rgba(19, 95, 106, 0.24));
 }
 
 .art-orbit {
@@ -690,13 +676,11 @@ h1 em,
   background: #dbe8e4;
 }
 
-.about-icon svg {
-  width: 52px;
-  fill: none;
-  stroke: var(--ink);
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 3;
+.about-icon img {
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 10px rgba(23, 61, 53, 0.18));
 }
 
 .about-card > p {
@@ -738,6 +722,10 @@ footer p:last-child {
 
 .brand-footer {
   color: white;
+}
+
+.brand-footer .brand-mark img {
+  filter: drop-shadow(0 2px 6px rgba(90, 226, 241, 0.28));
 }
 
 .brand-footer > span > span {
@@ -813,6 +801,54 @@ footer p:last-child {
 .dialog-body p,
 .dialog-body li {
   color: #4f655f;
+}
+
+.dialog-body li {
+  margin-bottom: 10px;
+  padding-left: 4px;
+}
+
+.dialog-body ol,
+.dialog-body ul {
+  padding-left: 25px;
+}
+
+.dialog-body li > ul {
+  margin-top: 10px;
+}
+
+.dialog-body blockquote {
+  margin: 30px 0;
+  padding: 24px 28px;
+  color: var(--ink);
+  border-left: 4px solid var(--coral);
+  background: var(--cream);
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  line-height: 1.45;
+}
+
+.article-example {
+  margin: 34px 0;
+  padding: 26px 28px;
+  border: 1px solid #d6dfdc;
+  background: #eef5f2;
+}
+
+.article-example > strong {
+  color: var(--coral);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.article-source {
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: var(--coral);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
 }
 
 .dialog-note {
