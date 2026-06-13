@@ -6,8 +6,8 @@ const root = path.dirname(fileURLToPath(import.meta.url));
 const output = path.join(root, "public");
 const assets = [
   ["index.html", "index.html"],
-  ["styles.css", "site-v2.css"],
-  ["app.js", "site-v2.js"],
+  ["styles.css", "site-v3.css"],
+  ["app.js", "site-v4.js"],
   ["_headers", "_headers"],
   ["logo.png", "logo.png"],
   ["favicon.png", "favicon.png"],
