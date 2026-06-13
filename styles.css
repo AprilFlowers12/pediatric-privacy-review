@@ -108,6 +108,7 @@ button {
   width: 56px;
   height: 42px;
   place-items: center;
+  flex: 0 0 56px;
 }
 
 .brand-mark img {
@@ -269,14 +270,19 @@ h1 em,
 }
 
 .shield {
-  width: min(270px, 75%);
+  width: 158px;
 }
 
-.shield img {
-  display: block;
+.shield svg {
   width: 100%;
-  height: auto;
-  filter: drop-shadow(0 18px 25px rgba(19, 95, 106, 0.24));
+}
+
+.shield-body {
+  fill: var(--ink);
+}
+
+.shield-heart {
+  fill: var(--coral);
 }
 
 .art-orbit {
@@ -676,11 +682,13 @@ h1 em,
   background: #dbe8e4;
 }
 
-.about-icon img {
-  width: 76px;
-  height: 76px;
-  object-fit: contain;
-  filter: drop-shadow(0 6px 10px rgba(23, 61, 53, 0.18));
+.about-icon svg {
+  width: 52px;
+  fill: none;
+  stroke: var(--ink);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
 }
 
 .about-card > p {
