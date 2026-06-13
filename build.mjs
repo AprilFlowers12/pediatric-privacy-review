@@ -4,7 +4,14 @@ import path from "node:path";
 
 const root = path.dirname(fileURLToPath(import.meta.url));
 const output = path.join(root, "public");
-const assets = ["index.html", "styles.css", "app.js", "_headers"];
+const assets = [
+  "index.html",
+  "styles.css",
+  "app.js",
+  "_headers",
+  "logo.png",
+  "favicon.png",
+];
 
 await mkdir(output, { recursive: true });
 await Promise.all(
