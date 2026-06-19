@@ -16,8 +16,30 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="site-v3.css" />
-    <script src="site-v4.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        const hiddenTitles = new Set([
+          "Healthcare Privacy Breaches",
+          "Emerging Tech & Children’s Privacy",
+          "Simplified Privacy Laws",
+        ]);
+
+        if (typeof articles === "undefined" || !Array.isArray(articles)) return;
+
+        for (let index = articles.length - 1; index >= 0; index -= 1) {
+          if (hiddenTitles.has(articles[index].title)) {
+            articles.splice(index, 1);
+          }
+        }
+
+        if (typeof renderArticles === "function") {
+          const activeFilter = document.querySelector(".filter.active")?.dataset.filter || "all";
+          renderArticles(activeFilter);
+        }
+      });
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
