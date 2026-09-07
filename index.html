@@ -16,30 +16,9 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="site-v3.css" />
-    <script src="site-v4.js" defer></script>
-    <script>
-      window.addEventListener("DOMContentLoaded", () => {
-        const hiddenTitles = new Set([
-          "Healthcare Privacy Breaches",
-          "Emerging Tech & Children’s Privacy",
-          "Simplified Privacy Laws",
-        ]);
-
-        if (typeof articles === "undefined" || !Array.isArray(articles)) return;
-
-        for (let index = articles.length - 1; index >= 0; index -= 1) {
-          if (hiddenTitles.has(articles[index].title)) {
-            articles.splice(index, 1);
-          }
-        }
-
-        if (typeof renderArticles === "function") {
-          const activeFilter = document.querySelector(".filter.active")?.dataset.filter || "all";
-          renderArticles(activeFilter);
-        }
-      });
-    </script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+    <script src="privacy-laws.js" type="module"></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -62,6 +41,7 @@
 
       <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
         <a href="#articles">Articles</a>
+        <a href="#privacy-laws">Privacy law library</a>
         <a href="#topics">Topics</a>
         <a href="#about">About</a>
         <a class="nav-cta" href="#articles">Start reading</a>
@@ -138,6 +118,58 @@
 
         <div id="article-grid" class="article-grid" aria-live="polite"></div>
         <p id="empty-state" class="empty-state" hidden>No articles match this topic yet.</p>
+      </section>
+
+      <section id="privacy-laws" class="laws-section" aria-labelledby="laws-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span></span> Know your protections</p>
+            <h2 id="laws-heading">U.S. privacy law library</h2>
+          </div>
+          <p>Find a law. Understand who it protects. Go straight to the legal text and the people responsible for it.</p>
+        </div>
+        <p class="laws-scope">A selected collection of federal laws and rules, plus California and Washington protections. Includes children's and healthcare privacy; this is not a complete 50-state database.</p>
+        <form id="law-search-form" class="law-controls" role="search" aria-label="Search privacy laws">
+          <div class="law-search-field">
+            <label for="law-search">Search the library</label>
+            <input id="law-search" type="search" placeholder="Try COPPA, patient records, or parental consent" autocomplete="off" aria-controls="law-results" />
+          </div>
+          <div>
+            <label for="law-topic">Topic</label>
+            <select id="law-topic" aria-controls="law-results">
+              <option value="all">All topics</option>
+              <option value="children">Children's privacy</option>
+              <option value="healthcare">Healthcare privacy</option>
+              <option value="education">Student privacy</option>
+              <option value="consumer">Consumer privacy</option>
+              <option value="financial">Financial privacy</option>
+              <option value="government">Government records</option>
+            </select>
+          </div>
+          <div>
+            <label for="law-jurisdiction">Jurisdiction</label>
+            <select id="law-jurisdiction" aria-controls="law-results">
+              <option value="all">All jurisdictions</option>
+              <option value="Federal">Federal</option>
+              <option value="California">California</option>
+              <option value="Washington">Washington</option>
+            </select>
+          </div>
+          <button class="law-reset" type="reset">Clear filters</button>
+        </form>
+        <div class="law-results-heading">
+          <p id="law-count" role="status" aria-live="polite"></p>
+          <p>Sources reviewed <time datetime="2026-09-06">September 6, 2026</time></p>
+        </div>
+        <div id="law-results" class="law-grid"></div>
+        <p id="law-empty" class="empty-state" hidden>No laws match these filters. Try an acronym, a broader topic, or clear the filters.</p>
+        <noscript><p>Enable JavaScript to search the library. You can also browse <a href="https://www.hhs.gov/hipaa/for-professionals/privacy/laws-regulations/index.html">HHS privacy guidance</a> and <a href="https://www.ftc.gov/news-events/topics/protecting-consumer-privacy-security/kids-privacy-coppa">FTC children's privacy resources</a>.</p></noscript>
+        <details class="law-methodology">
+          <summary>About this collection and its sources</summary>
+          <p>Summaries are editorial explanations prepared for The Pediatric Privacy Review. Statutes are credited to the enacting legislature; regulations are credited to the issuing agency. Government publishers are identified separately. Source links do not imply endorsement.</p>
+          <p>The full legal text opens on the government publisher's website. The eCFR is a continuously updated, authoritative but unofficial compilation of federal regulations; its pages also link to official published editions. Guidance is listed separately from legal text.</p>
+          <p>This library is reviewed manually, not updated automatically. The review date is not an effective date. Coverage, exceptions, later amendments, and court orders can affect how a provision applies. Consult the linked text for the complete requirements. Educational information, not legal advice.</p>
+        </details>
       </section>
 
       <section class="principles">
