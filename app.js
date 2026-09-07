@@ -97,6 +97,117 @@ const articles = [
     `,
   },
   {
+    title: "HIPAA BREACH NOTIFICATION RULE",
+    date: "December 11, 2025",
+    minutes: 5,
+    tags: ["HIPAA", "SECURITY", "HEALTHCARE PRIVACY"],
+    summary:
+      "What healthcare organizations need to do when protected health information is lost, stolen, or shared without permission.",
+    symbol: "BN",
+    background: "#f3e1bf",
+    accent: "#9a6a18",
+    content: `
+      <p class="dialog-lede">If you work in healthcare or handle patient information, you have probably heard of HIPAA. But what happens if there is a data breach? That is where the HIPAA Breach Notification Rule comes in.</p>
+
+      <h3>What Is the HIPAA Breach Notification Rule?</h3>
+      <p>The HIPAA Breach Notification Rule is a federal law that tells healthcare organizations what to do if protected health information (PHI) is lost, stolen, or shared without permission. PHI includes things like medical records, Social Security numbers, and other personal details about patients.</p>
+
+      <h3>What Counts as a Breach?</h3>
+      <p>A breach happens when someone uses or shares PHI in a way that is not allowed by the HIPAA Privacy Rule. But not every mistake is a breach. For example, if a staff member accidentally opens the wrong file but does not share it, that might not count. The key question is: was the patient's privacy or security put at risk?</p>
+      <p>Organizations must do a risk assessment to decide if the PHI was really compromised. They look at:</p>
+      <ul>
+        <li>What kind of information was involved?</li>
+        <li>Who got access to it?</li>
+        <li>Was the information actually seen or taken?</li>
+        <li>Did the organization fix the problem quickly?</li>
+      </ul>
+
+      <h3>Who Needs to Be Notified?</h3>
+      <p>If there is a real breach, the organization must notify:</p>
+      <ul>
+        <li>The affected patients as soon as possible, but no later than 60 days after discovering the breach.</li>
+        <li>The U.S. Department of Health and Human Services (HHS).</li>
+        <li>The media, if the breach affects more than 500 people in one area.</li>
+      </ul>
+
+      <h3>How Are People Notified?</h3>
+      <p>Most of the time, organizations send a letter by first-class mail to the last known address. If the patient has agreed to get emails, they might get an email instead. If the organization cannot reach someone, they may post a notice on their website or in the media.</p>
+
+      <h3>Are There Exceptions?</h3>
+      <p>Yes. Not every incident requires notification. For example:</p>
+      <ul>
+        <li>If a staff member accidentally sends information to another authorized staff member at the same facility.</li>
+        <li>If the information could not reasonably be kept or used by the person who received it.</li>
+        <li>If a risk assessment shows there is a low chance the PHI was actually compromised.</li>
+      </ul>
+
+      <h3>The Bigger Picture</h3>
+      <p>The HIPAA Breach Notification Rule helps keep patients informed and gives them a chance to protect themselves from identity theft or fraud. It also holds healthcare organizations accountable for protecting sensitive information.</p>
+
+      <h3>Main Points to Remember</h3>
+      <p>If you want to learn more, check out the official HHS page on the HIPAA Breach Notification Rule or ask your organization's privacy officer for details.</p>
+
+      <h3>Relevant Article(s):</h3>
+      <p><a class="article-source" href="https://www.hhs.gov/hipaa/for-professionals/breach-notification/index.html" target="_blank" rel="noopener noreferrer">HHS HIPAA Breach Notification Rule guidance &rarr;</a></p>
+    `,
+  },
+  {
+    title: "COPPA - Children's Online Privacy Protection Act",
+    date: "October 28, 2025",
+    minutes: 6,
+    tags: ["PRIVACY", "SECURITY"],
+    summary:
+      "The key principles of COPPA and how it protects children's online privacy.",
+    symbol: "13",
+    background: "#ddd9ec",
+    accent: "#67558f",
+    content: `
+      <p class="dialog-lede">Although COPPA is not a healthcare-specific privacy law, it is equally important for parents and healthcare app developers to understand its impact on protecting children's data.</p>
+
+      <h3>Understanding Privacy Policies: COPPA</h3>
+      <p>When children use websites, apps, or smart devices, their personal data is often collected, sometimes without parents realizing it. The Children's Online Privacy Protection Act (COPPA) is the U.S. law designed to protect kids' privacy online. Understanding what COPPA requires can help parents, educators, and app developers make smarter decisions about digital safety.</p>
+
+      <h3>What Is COPPA?</h3>
+      <p>Enacted in 1998 and enforced by the Federal Trade Commission (FTC), COPPA gives parents control over what information websites and online services can collect from children under 13 years old. It applies to apps, games, educational platforms, and even voice assistants that collect personal information from young users.</p>
+
+      <h3>What Counts as Personal Information?</h3>
+      <p>Under COPPA, personal information includes much more than just a name or address. It can be:</p>
+      <ul>
+        <li>Email addresses and phone numbers.</li>
+        <li>Screen names or usernames that identify a child.</li>
+        <li>Photos, videos, and voice recordings.</li>
+        <li>Geolocation data, like a device's GPS coordinates.</li>
+        <li>Persistent identifiers, such as cookies or device IDs used to track online behavior.</li>
+      </ul>
+
+      <h3>Compliance Requirements for Organizations</h3>
+      <p>Websites and app developers that are directed toward children or knowingly collect information from them must:</p>
+      <ul>
+        <li>Post a clear privacy policy describing their data practices.</li>
+        <li>Notify parents directly before collecting a child's personal information.</li>
+        <li>Obtain verifiable parental consent before collecting or using that data.</li>
+        <li>Provide parents with access to review or delete their child's information.</li>
+        <li>Maintain data security and only keep information as long as necessary.</li>
+      </ul>
+      <p>Violations of COPPA can result in significant fines and legal action. Recent FTC settlements with major tech and gaming companies have exceeded millions of dollars, reinforcing the importance of compliance.</p>
+
+      <h3>What Parents Can Do</h3>
+      <p>Parents can take proactive steps to safeguard their children's digital privacy:</p>
+      <ul>
+        <li>Review privacy policies before allowing your child to use an app or website.</li>
+        <li>Check app store listings for the Children's Privacy section.</li>
+        <li>Talk with your child about what information should stay private online.</li>
+        <li>Use parental controls and monitor device permissions regularly.</li>
+      </ul>
+
+      <h3>The Ongoing Importance of COPPA</h3>
+      <p>As technology becomes more integrated into children's daily lives, from smartwatches and learning apps to social media, the boundaries between education, entertainment, and data collection are increasingly blurred. COPPA remains one of the few federal protections specifically aimed at ensuring children's privacy in this digital landscape.</p>
+
+      <h3>Related Article(s):</h3>
+      <p><a class="article-source" href="https://www.ftc.gov/legal-library/browse/rules/childrens-online-privacy-protection-rule-coppa" target="_blank" rel="noopener noreferrer">FTC Children's Online Privacy Protection Rule guidance &rarr;</a></p>
+    `,
+  },
+  {
     title: "WHAT’S NEW WITH HIPAA IN 2025",
     date: "September 15, 2025",
     minutes: 5,
@@ -293,96 +404,6 @@ const articles = [
       <p><a class="article-source" href="https://www.hhs.gov/hipaa/for-professionals/security/index.html" target="_blank" rel="noopener noreferrer">HHS HIPAA Security Rule guidance →</a></p>
     `,
   },
-  {
-    title: "Healthcare Privacy Breaches",
-    date: "October 6, 2025",
-    minutes: 10,
-    tags: ["HEALTHCARE PRIVACY", "DATA BREACHES", "SECURITY"],
-    summary:
-      "What a healthcare data breach can mean for families, and the practical steps to take after a notification.",
-    symbol: "!",
-    background: "#f3e1bf",
-    accent: "#9a6a18",
-    lede:
-      "A breach notice can be unsettling, especially when a child’s information is involved. Understanding the notice is the first step toward a measured response.",
-    sections: [
-      {
-        heading: "Read the details",
-        body:
-          "Identify which organization was affected, what categories of information were involved, when the event occurred, and what assistance is being offered. Keep the notice for your records.",
-      },
-      {
-        heading: "Watch for misuse",
-        body:
-          "Depending on the information involved, families may need to monitor insurance statements, account activity, credit reports, or unexpected communications. Be cautious with messages that create urgency or ask for credentials.",
-      },
-      {
-        heading: "Ask direct questions",
-        body:
-          "The affected organization should be able to explain its response, how families can get help, and what steps are being taken to reduce the risk of a similar incident.",
-      },
-    ],
-  },
-  {
-    title: "Emerging Tech & Children’s Privacy",
-    date: "October 14, 2025",
-    minutes: 1,
-    tags: ["PRIVACY", "AI", "HEALTHCARE TECH"],
-    summary:
-      "A quick framework for evaluating apps, connected devices, and AI tools that collect children’s data.",
-    symbol: "AI",
-    background: "#ddd9ec",
-    accent: "#67558f",
-    lede:
-      "Digital health tools can make care more convenient and responsive, but their privacy protections vary widely.",
-    sections: [
-      {
-        heading: "Start with the data",
-        body:
-          "Ask what information the tool collects, why it needs that information, how long the data is retained, and whether it is sold or shared for advertising, analytics, or product development.",
-      },
-      {
-        heading: "Look beyond HIPAA",
-        body:
-          "A health-related app is not automatically covered by HIPAA. Consumer protection and children’s privacy laws may apply instead, depending on the product and the child’s age.",
-      },
-      {
-        heading: "Choose the minimum",
-        body:
-          "Prefer tools that collect only what is needed, offer clear privacy controls, use strong security, and make it possible to delete an account and its associated data.",
-      },
-    ],
-  },
-  {
-    title: "Simplified Privacy Laws",
-    date: "September 8, 2025",
-    minutes: 15,
-    tags: ["LAWS", "PRIVACY", "HIPAA", "SECURITY"],
-    summary:
-      "A plain-language starting point for understanding the overlapping rules that may protect children’s information.",
-    symbol: "§",
-    background: "#e7e2d7",
-    accent: "#755f3f",
-    lede:
-      "Children’s data can be governed by different laws depending on where it was collected, who collected it, and how it will be used.",
-    sections: [
-      {
-        heading: "Context matters",
-        body:
-          "Health providers, schools, consumer apps, and online services can fall under different legal frameworks. The same piece of information may receive different protection in different settings.",
-      },
-      {
-        heading: "Ask who is responsible",
-        body:
-          "Before relying on a privacy promise, identify the organization collecting the data and the law or contractual obligation that applies to it.",
-      },
-      {
-        heading: "Use laws as a floor",
-        body:
-          "Legal compliance is only one part of responsible data use. Clear explanations, limited collection, secure systems, and meaningful choices help build trust beyond minimum requirements.",
-      },
-    ],
-  },
 ];
 
 const grid = document.querySelector("#article-grid");
@@ -393,7 +414,7 @@ const dialogContent = document.querySelector("#dialog-content");
 function articleCard(article, index) {
   const primaryTag = article.tags[0];
   return `
-    <article class="article-card" style="--card-bg:${article.background};--card-accent:${article.accent}">
+    <article class="article-card">
       <div class="card-visual">
         <span class="card-symbol">${article.symbol}</span>
       </div>
@@ -418,13 +439,17 @@ function renderArticles(filter = "all") {
     .filter(({ article }) => filter === "all" || article.tags.includes(filter));
 
   grid.innerHTML = visible.map(({ article, index }) => articleCard(article, index)).join("");
+  visible.forEach(({ article }, index) => {
+    grid.children[index].style.setProperty("--card-bg", article.background);
+    grid.children[index].style.setProperty("--card-accent", article.accent);
+  });
   emptyState.hidden = visible.length !== 0;
 }
 
 function openArticle(index) {
   const article = articles[index];
   dialogContent.innerHTML = `
-    <header class="dialog-hero" style="--dialog-bg:${article.background}">
+    <header class="dialog-hero">
       <div class="dialog-meta">
         <span>${article.tags.join(" · ")}</span>
         <span>${article.date}</span>
@@ -453,6 +478,7 @@ function openArticle(index) {
       </p>
     </article>
   `;
+  dialogContent.querySelector(".dialog-hero").style.setProperty("--dialog-bg", article.background);
   dialog.showModal();
   document.body.style.overflow = "hidden";
 }
