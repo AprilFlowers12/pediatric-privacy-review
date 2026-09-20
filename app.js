@@ -1,7 +1,6 @@
 const articles = [
   {
     title: "Did the HIPAA Security Rule Update Go Into Effect in May 2026?",
-    date: "June 12, 2026",
     minutes: 8,
     tags: ["HIPAA", "SECURITY", "HEALTHCARE PRIVACY"],
     summary:
@@ -98,7 +97,6 @@ const articles = [
   },
   {
     title: "HIPAA BREACH NOTIFICATION RULE",
-    date: "December 11, 2025",
     minutes: 5,
     tags: ["HIPAA", "SECURITY", "HEALTHCARE PRIVACY"],
     summary:
@@ -153,7 +151,6 @@ const articles = [
   },
   {
     title: "COPPA - Children's Online Privacy Protection Act",
-    date: "October 28, 2025",
     minutes: 6,
     tags: ["PRIVACY", "SECURITY"],
     summary:
@@ -209,7 +206,6 @@ const articles = [
   },
   {
     title: "WHAT’S NEW WITH HIPAA IN 2025",
-    date: "September 15, 2025",
     minutes: 5,
     tags: ["HIPAA", "SECURITY", "HEALTHCARE PRIVACY"],
     summary:
@@ -282,7 +278,6 @@ const articles = [
   },
   {
     title: "HIPAA Privacy Rule",
-    date: "September 8, 2025",
     minutes: 5,
     tags: ["HIPAA", "PRIVACY", "HEALTHCARE PRIVACY"],
     summary:
@@ -358,7 +353,6 @@ const articles = [
   },
   {
     title: "HIPAA Security Rule",
-    date: "September 8, 2025",
     minutes: 5,
     tags: ["HIPAA", "SECURITY", "HEALTHCARE PRIVACY"],
     summary:
@@ -421,7 +415,6 @@ function articleCard(article, index) {
       <div class="card-content">
         <div class="card-meta">
           <span class="card-tag">${primaryTag}</span>
-          <span>${article.date}</span>
         </div>
         <h3>${article.title}</h3>
         <p>${article.summary}</p>
@@ -452,7 +445,6 @@ function openArticle(index) {
     <header class="dialog-hero">
       <div class="dialog-meta">
         <span>${article.tags.join(" · ")}</span>
-        <span>${article.date}</span>
       </div>
       <h2>${article.title}</h2>
     </header>
@@ -522,5 +514,395 @@ siteNav.addEventListener("click", () => {
   menuButton.setAttribute("aria-expanded", "false");
 });
 
+const gameScenes = [
+  {
+    type: "spot",
+    label: "Mission 1 · Spot",
+    title: "Inspect the sign-up screen",
+    brief: "The app says it helps families track asthma symptoms. Find the three requests that deserve a privacy pause.",
+    fields: [
+      { icon: "Aa", name: "Child's full legal name", detail: "Required to continue", risky: true },
+      { icon: "●", name: "Daily symptom check-in", detail: "Used for the symptom chart", risky: false },
+      { icon: "⌖", name: "Precise location — always on", detail: "Used for app insights", risky: true },
+      { icon: "▣", name: "School name and classroom", detail: "Used to personalize tips", risky: true },
+      { icon: "◷", name: "Medication reminder time", detail: "Used for reminders", risky: false },
+    ],
+    coaching: "You found the mismatch: legal name, constant location, and school details are not needed for a basic symptom tracker. Useful data should have a clear, limited purpose.",
+  },
+  {
+    type: "select",
+    label: "Mission 2 · Choose",
+    title: "Build a minimum-data setup",
+    brief: "Select only what the app needs to chart symptoms and send medicine reminders.",
+    options: [
+      { name: "Symptom check-ins", needed: true },
+      { name: "Reminder times", needed: true },
+      { name: "Full birth date", needed: false },
+      { name: "Phone contacts", needed: false },
+      { name: "Advertising ID", needed: false },
+      { name: "A nickname", needed: true },
+    ],
+    coaching: "A nickname, symptom entries, and reminder times can support the stated features. Contacts, advertising IDs, and a full birth date add risk without helping those tasks.",
+  },
+  {
+    type: "branch",
+    label: "Mission 3 · Respond",
+    title: "Handle an urgent message",
+    brief: "A text arrives: “Your child's result is ready. Sign in now before this secure link expires.”",
+    choices: [
+      "Open the link because it says secure",
+      "Reply with the child's birth date to confirm",
+      "Close the text and open the clinic's official portal directly",
+    ],
+    answer: 2,
+    coaching: "Urgency and a login link are warning signs. Use the clinic's known app, saved bookmark, or published phone number instead of the message's route.",
+  },
+  {
+    type: "order",
+    label: "Mission 4 · Recover",
+    title: "Build a calm breach-response plan",
+    brief: "Put these steps in a sensible order after receiving a possible breach notice.",
+    steps: [
+      "Verify the notice using the organization's official contact information",
+      "Identify what information may have been involved",
+      "Secure affected accounts and watch relevant statements or reports",
+      "Keep the notice and follow the organization's verified updates",
+    ],
+    coaching: "Start by verifying the notice, understand the exposure, take targeted protective steps, and keep reliable records. Avoid clicking unverified links in the notice itself.",
+  },
+];
+
+const lawQuestions = [
+  {
+    question: "COPPA's core protections generally apply to personal information collected online from which children?",
+    choices: ["Children under 13", "Children under 16", "Everyone under 18"],
+    answer: 0,
+    explanation: "COPPA covers operators of child-directed services and operators with actual knowledge that they collect personal information from children under 13.",
+    source: "https://www.federalregister.gov/documents/2025/04/22/2025-05904/childrens-online-privacy-protection-rule",
+    sourceLabel: "FTC final COPPA Rule amendments",
+  },
+  {
+    question: "Under the updated COPPA Rule, can a biometric identifier used to recognize a child count as personal information?",
+    choices: ["Yes", "No", "Only if it is printed on paper"],
+    answer: 0,
+    explanation: "Yes. The updated definition includes biometric identifiers that can be used for automated or semi-automated recognition, such as certain voiceprints and facial templates.",
+    source: "https://www.federalregister.gov/documents/2025/04/22/2025-05904/childrens-online-privacy-protection-rule",
+    sourceLabel: "FTC final COPPA Rule amendments",
+  },
+  {
+    question: "May a COPPA-covered service assume one parental approval also permits a non-integral disclosure of a child's information to third parties?",
+    choices: ["Yes, one approval always covers everything", "No, separate verifiable parental consent is required", "Only when the child agrees"],
+    answer: 1,
+    explanation: "The amended Rule requires a separate parental choice for third-party disclosure unless that disclosure is integral to the service.",
+    source: "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-312/section-312.5",
+    sourceLabel: "Current COPPA Rule, 16 CFR 312.5",
+  },
+  {
+    question: "When do FERPA rights generally transfer from a parent to the student?",
+    choices: ["At age 13", "At age 16", "At age 18 or attendance at a postsecondary institution"],
+    answer: 2,
+    explanation: "FERPA rights generally transfer when the student turns 18 or attends a postsecondary institution at any age, subject to specific exceptions.",
+    source: "https://studentprivacy.ed.gov/legal-basics",
+    sourceLabel: "U.S. Department of Education FERPA legal basics",
+  },
+  {
+    question: "Is every consumer health app automatically covered by HIPAA?",
+    choices: ["Yes", "No", "Only if it has a privacy policy"],
+    answer: 1,
+    explanation: "No. HIPAA generally applies to covered entities and business associates. Data entered into an unrelated consumer app may fall outside HIPAA, though other laws can apply.",
+    source: "https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/cell-phone-hipaa/index.html",
+    sourceLabel: "HHS guidance on personal devices and health apps",
+  },
+];
+
+const gameStage = document.querySelector("#game-stage");
+const quizStage = document.querySelector("#quiz-stage");
+let gameIndex = 0;
+let gameScore = 0;
+let sceneState = {};
+let quizIndex = 0;
+let quizScore = 0;
+
+function renderQuizQuestion() {
+  const item = lawQuestions[quizIndex];
+  quizStage.innerHTML = `
+    <div class="scenario-icon" aria-hidden="true">§</div>
+    <p class="activity-question">${item.question}</p>
+    <div class="choice-list">
+      ${item.choices.map((choice, index) => `<button type="button" data-quiz-choice="${index}">${choice}</button>`).join("")}
+    </div>
+    <div class="activity-feedback" role="status"></div>
+  `;
+}
+
+function updateGameChrome() {
+  document.querySelector("#game-progress").textContent = `Mission ${gameIndex + 1} of ${gameScenes.length}`;
+  document.querySelector("#game-score").textContent = gameScore;
+  document.querySelector("#shield-fill").style.width = `${gameScore}%`;
+  document.querySelectorAll(".mission-map li").forEach((item, index) => {
+    item.classList.toggle("current", index === gameIndex);
+    item.classList.toggle("complete", index < gameIndex);
+  });
+}
+
+function sceneHeader(scene) {
+  return `
+    <div class="scene-heading">
+      <p class="scenario-title">${scene.label}</p>
+      <h4>${scene.title}</h4>
+      <p>${scene.brief}</p>
+    </div>
+  `;
+}
+
+function renderGame() {
+  const scene = gameScenes[gameIndex];
+  updateGameChrome();
+
+  if (scene.type === "spot") {
+    gameStage.innerHTML = `
+      ${sceneHeader(scene)}
+      <div class="mock-app" aria-label="Health app sign-up requests">
+        <div class="mock-app-bar"><span>AirTrack Junior</span><i></i><i></i><i></i></div>
+        <div class="spot-grid">
+          ${scene.fields.map((field, index) => `
+            <button class="data-request" type="button" data-spot="${index}" aria-pressed="false">
+              <span class="data-icon" aria-hidden="true">${field.icon}</span>
+              <span><strong>${field.name}</strong><small>${field.detail}</small></span>
+              <span class="flag-marker" aria-hidden="true">+</span>
+            </button>
+          `).join("")}
+        </div>
+      </div>
+      <div class="scene-actions">
+        <span>Select three requests</span>
+        <button type="button" class="check-scene" data-check-scene>Lock answer</button>
+      </div>
+      <div class="activity-feedback" role="status"></div>
+    `;
+  } else if (scene.type === "select") {
+    gameStage.innerHTML = `
+      ${sceneHeader(scene)}
+      <div class="data-builder">
+        ${scene.options.map((option, index) => `
+          <button type="button" class="data-toggle" data-data-toggle="${index}" aria-pressed="false">
+            <span class="toggle-track"><i></i></span>
+            <span>${option.name}</span>
+          </button>
+        `).join("")}
+      </div>
+      <div class="scene-actions">
+        <span>Turn on only what is needed</span>
+        <button type="button" class="check-scene" data-check-scene>Test setup</button>
+      </div>
+      <div class="activity-feedback" role="status"></div>
+    `;
+  } else if (scene.type === "branch") {
+    gameStage.innerHTML = `
+      ${sceneHeader(scene)}
+      <div class="message-simulation">
+        <div class="message-device" aria-label="Suspicious text message">
+          <div class="message-sender"><span>?</span> Unknown sender</div>
+          <p>Your child's result is ready. Sign in now before this secure link expires.</p>
+          <span class="fake-link">view-secure-result.example</span>
+        </div>
+        <div class="branch-choices">
+          ${scene.choices.map((choice, index) => `<button type="button" data-branch-choice="${index}"><span>${String.fromCharCode(65 + index)}</span>${choice}</button>`).join("")}
+        </div>
+      </div>
+      <div class="activity-feedback" role="status"></div>
+    `;
+  } else {
+    if (!sceneState.order) sceneState.order = [2, 0, 3, 1];
+    gameStage.innerHTML = `
+      ${sceneHeader(scene)}
+      <ol class="order-list" aria-label="Breach response steps in chosen order">
+        ${sceneState.order.map((stepIndex, position) => `
+          <li>
+            <span class="order-number">${position + 1}</span>
+            <span>${scene.steps[stepIndex]}</span>
+            <span class="order-controls">
+              <button type="button" data-order-move="up" data-position="${position}" ${position === 0 ? "disabled" : ""} aria-label="Move step up">↑</button>
+              <button type="button" data-order-move="down" data-position="${position}" ${position === scene.steps.length - 1 ? "disabled" : ""} aria-label="Move step down">↓</button>
+            </span>
+          </li>
+        `).join("")}
+      </ol>
+      <div class="scene-actions">
+        <span>Use the arrows to reorder the steps</span>
+        <button type="button" class="check-scene" data-check-scene>Check plan</button>
+      </div>
+      <div class="activity-feedback" role="status"></div>
+    `;
+  }
+}
+
+function renderQuiz() {
+  document.querySelector("#quiz-progress").textContent = `${quizIndex + 1} of ${lawQuestions.length}`;
+  renderQuizQuestion();
+}
+
+function finishQuiz() {
+  const total = lawQuestions.length;
+  const strong = quizScore >= Math.ceil(total * 0.8);
+  quizStage.innerHTML = `
+    <div class="result-mark" aria-hidden="true">${strong ? "✓" : "↻"}</div>
+    <p class="scenario-title">Quiz complete</p>
+    <p class="activity-result">You answered <strong>${quizScore} of ${total}</strong> correctly.</p>
+    <p>${strong ? "Strong work. You know several important boundaries across COPPA, FERPA, and HIPAA." : "Privacy law has a lot of boundaries. Review the explanations and try another round."}</p>
+    <button class="activity-next" type="button" data-restart-quiz>Try again</button>
+    <p class="no-save-note">Your result is not saved or sent anywhere.</p>
+  `;
+  document.querySelector("#quiz-progress").textContent = "Complete";
+}
+
+function finishGame() {
+  const rank = gameScore >= 90 ? "Privacy Protector" : gameScore >= 65 ? "Careful Navigator" : "Privacy Apprentice";
+  document.querySelector("#game-progress").textContent = "Mission complete";
+  document.querySelector("#game-score").textContent = gameScore;
+  document.querySelector("#shield-fill").style.width = `${gameScore}%`;
+  document.querySelectorAll(".mission-map li").forEach((item) => {
+    item.classList.remove("current");
+    item.classList.add("complete");
+  });
+  gameStage.innerHTML = `
+    <div class="mission-complete">
+      <div class="completion-shield" aria-hidden="true">✓</div>
+      <p class="scenario-title">Mission complete</p>
+      <h4>${rank}</h4>
+      <p>You restored the privacy shield to <strong>${gameScore}%</strong>.</p>
+      <div class="strength-grid">
+        <div><span>Pause</span><strong>Check unexpected requests</strong></div>
+        <div><span>Minimize</span><strong>Share only what is needed</strong></div>
+        <div><span>Verify</span><strong>Use trusted routes</strong></div>
+      </div>
+      <button class="activity-next" type="button" data-restart-game>Replay mission</button>
+      <p class="no-save-note">This result exists only on this screen. It is never stored or transmitted.</p>
+    </div>
+  `;
+}
+
+function awardScene(points, coaching, title) {
+  gameScore = Math.min(100, gameScore + points);
+  updateGameChrome();
+  gameStage.querySelectorAll("button").forEach((button) => { button.disabled = true; });
+  const feedback = gameStage.querySelector(".activity-feedback");
+  feedback.innerHTML = `
+    <div class="mission-coaching">
+      <span>+${points} shield points</span>
+      <strong>${title}</strong>
+      <p>${coaching}</p>
+      <button class="activity-next" type="button" data-next-game>${gameIndex === gameScenes.length - 1 ? "View mission report" : "Continue mission"}</button>
+    </div>
+  `;
+  feedback.scrollIntoView({ behavior: "smooth", block: "nearest" });
+}
+
+function checkGameScene() {
+  const scene = gameScenes[gameIndex];
+  if (scene.type === "spot") {
+    const selected = [...gameStage.querySelectorAll("[data-spot][aria-pressed='true']")].map((button) => Number(button.dataset.spot));
+    const correctHits = selected.filter((index) => scene.fields[index].risky).length;
+    const wrongHits = selected.length - correctHits;
+    const exact = correctHits === 3 && wrongHits === 0;
+    const points = exact ? 25 : Math.max(5, correctHits * 7 - wrongHits * 4);
+    awardScene(points, scene.coaching, exact ? "All three red flags found." : "Good investigation — here is what to notice.");
+  } else if (scene.type === "select") {
+    const selected = [...gameStage.querySelectorAll("[data-data-toggle][aria-pressed='true']")].map((button) => Number(button.dataset.dataToggle));
+    const mismatches = scene.options.filter((option, index) => selected.includes(index) !== option.needed).length;
+    const points = mismatches === 0 ? 25 : mismatches === 1 ? 18 : 8;
+    awardScene(points, scene.coaching, mismatches === 0 ? "Lean setup achieved." : "The setup can collect less.");
+  } else if (scene.type === "order") {
+    const exact = sceneState.order.every((stepIndex, index) => stepIndex === index);
+    const inPlace = sceneState.order.filter((stepIndex, index) => stepIndex === index).length;
+    const points = exact ? 25 : Math.max(5, inPlace * 6);
+    awardScene(points, scene.coaching, exact ? "Calm plan assembled." : "A safer sequence starts with verification.");
+  }
+}
+
+function answerQuiz(event) {
+  const button = event.target.closest("[data-quiz-choice]");
+  if (!button) return;
+  const item = lawQuestions[quizIndex];
+  const selected = Number(button.dataset.quizChoice);
+  const correct = selected === item.answer;
+  if (correct) quizScore++;
+
+  quizStage.querySelectorAll(".choice-list button").forEach((choice, index) => {
+    choice.disabled = true;
+    if (index === item.answer) choice.classList.add("correct-choice");
+    if (index === selected && !correct) choice.classList.add("incorrect-choice");
+  });
+
+  quizStage.querySelector(".activity-feedback").innerHTML = `
+    <strong>${correct ? "Correct." : "Take another look."}</strong>
+    <p>${item.explanation}</p>
+    <a href="${item.source}" target="_blank" rel="noopener noreferrer">${item.sourceLabel} →</a>
+    <button class="activity-next" type="button" data-next-quiz>${quizIndex === lawQuestions.length - 1 ? "See result" : "Next"}</button>
+  `;
+}
+
+gameStage.addEventListener("click", (event) => {
+  const spot = event.target.closest("[data-spot]");
+  const toggle = event.target.closest("[data-data-toggle]");
+  const branch = event.target.closest("[data-branch-choice]");
+  const move = event.target.closest("[data-order-move]");
+
+  if (spot) {
+    const active = spot.getAttribute("aria-pressed") === "true";
+    spot.setAttribute("aria-pressed", String(!active));
+    spot.classList.toggle("selected", !active);
+  } else if (toggle) {
+    const active = toggle.getAttribute("aria-pressed") === "true";
+    toggle.setAttribute("aria-pressed", String(!active));
+    toggle.classList.toggle("selected", !active);
+  } else if (branch) {
+    const scene = gameScenes[gameIndex];
+    const selected = Number(branch.dataset.branchChoice);
+    gameStage.querySelectorAll("[data-branch-choice]").forEach((choice, index) => {
+      choice.disabled = true;
+      if (index === scene.answer) choice.classList.add("correct-choice");
+      if (index === selected && index !== scene.answer) choice.classList.add("incorrect-choice");
+    });
+    awardScene(selected === scene.answer ? 25 : 7, scene.coaching, selected === scene.answer ? "Trusted route chosen." : "The message controlled the route.");
+  } else if (move) {
+    const position = Number(move.dataset.position);
+    const target = move.dataset.orderMove === "up" ? position - 1 : position + 1;
+    [sceneState.order[position], sceneState.order[target]] = [sceneState.order[target], sceneState.order[position]];
+    renderGame();
+  } else if (event.target.closest("[data-check-scene]")) {
+    checkGameScene();
+  } else if (event.target.closest("[data-next-game]")) {
+    gameIndex++;
+    sceneState = {};
+    gameIndex < gameScenes.length ? renderGame() : finishGame();
+  } else if (event.target.closest("[data-restart-game]")) {
+    gameIndex = 0;
+    gameScore = 0;
+    sceneState = {};
+    renderGame();
+  }
+});
+
+quizStage.addEventListener("click", (event) => {
+  if (event.target.closest("[data-quiz-choice]")) {
+    answerQuiz(event);
+  } else if (event.target.closest("[data-next-quiz]")) {
+    quizIndex++;
+    quizIndex < lawQuestions.length ? renderQuiz() : finishQuiz();
+  } else if (event.target.closest("[data-restart-quiz]")) {
+    quizIndex = 0;
+    quizScore = 0;
+    renderQuiz();
+  }
+});
+
+/*
+ * The game and quiz keep temporary progress in memory only. They intentionally
+ * use no cookies, browser storage, analytics, accounts, or network submissions.
+ */
+
 document.querySelector("#year").textContent = new Date().getFullYear();
 renderArticles();
+renderGame();
+renderQuiz();
