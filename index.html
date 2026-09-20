@@ -10,12 +10,6 @@
     <meta name="theme-color" content="#163d35" />
     <title>The Pediatric Privacy Review</title>
     <link rel="icon" type="image/png" href="favicon.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="styles.css" />
     <script src="app.js" defer></script>
     <script src="privacy-laws.js" type="module"></script>
@@ -40,7 +34,8 @@
       </button>
 
       <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
-        <a href="#articles">Articles</a>
+        <a href="#articles">Learn</a>
+        <a href="#privacy-playground">Play &amp; quiz</a>
         <a href="#privacy-laws">Privacy law library</a>
         <a href="#topics">Topics</a>
         <a href="#about">About</a>
@@ -100,7 +95,7 @@
         <div class="section-heading">
           <div>
             <p class="eyebrow"><span></span> The review</p>
-            <h2>Recent insights</h2>
+            <h2>Learn</h2>
           </div>
           <p>
             Research-backed explainers designed to help you make confident decisions about
@@ -118,6 +113,57 @@
 
         <div id="article-grid" class="article-grid" aria-live="polite"></div>
         <p id="empty-state" class="empty-state" hidden>No articles match this topic yet.</p>
+      </section>
+
+      <section id="privacy-playground" class="playground-section" aria-labelledby="playground-heading">
+        <div class="playground-heading">
+          <div>
+            <p class="eyebrow eyebrow-light"><span></span> Privacy playground</p>
+            <h2 id="playground-heading">Practice the pause.</h2>
+          </div>
+          <div class="privacy-promise">
+            <strong>Private by design</strong>
+            <p>No names, emails, accounts, cookies, analytics, or answer history. Nothing you choose leaves this page.</p>
+          </div>
+        </div>
+
+        <section class="game-panel" aria-labelledby="game-heading">
+          <div class="game-topbar">
+            <div>
+              <div class="tool-label"><span>Interactive mission</span><span id="game-progress">Mission 1 of 4</span></div>
+              <h3 id="game-heading">The Case of the Curious App</h3>
+              <p class="tool-intro">Help a family inspect a new pediatric health app before it gets access to a child’s data.</p>
+            </div>
+            <div class="shield-score" aria-live="polite">
+              <span>Privacy shield</span>
+              <strong><span id="game-score">0</span>/100</strong>
+              <div class="shield-meter" aria-hidden="true"><i id="shield-fill"></i></div>
+            </div>
+          </div>
+          <div class="game-shell">
+            <ol class="mission-map" aria-label="Mission progress">
+              <li class="current"><span>1</span><strong>Spot</strong></li>
+              <li><span>2</span><strong>Choose</strong></li>
+              <li><span>3</span><strong>Respond</strong></li>
+              <li><span>4</span><strong>Recover</strong></li>
+            </ol>
+            <div id="game-stage" class="activity-stage game-stage" aria-live="polite"></div>
+          </div>
+        </section>
+
+        <section class="quiz-panel" aria-labelledby="quiz-heading">
+          <div class="quiz-intro">
+            <div class="tool-label"><span>Law quiz</span><span id="quiz-progress">1 of 5</span></div>
+            <h3 id="quiz-heading">Know the rules</h3>
+            <p class="tool-intro">After the mission, test what current U.S. children’s privacy laws actually say.</p>
+          </div>
+          <div id="quiz-stage" class="activity-stage" aria-live="polite"></div>
+        </section>
+
+        <p class="quiz-review-note">
+          Law quiz reviewed September 19, 2026. Educational information, not legal advice.
+          Answers link to official government sources.
+        </p>
       </section>
 
       <section id="privacy-laws" class="laws-section" aria-labelledby="laws-heading">
