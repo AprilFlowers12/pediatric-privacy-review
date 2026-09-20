@@ -461,6 +461,10 @@ h1 em,
   color: var(--muted);
 }
 
+.section-heading-single {
+  grid-template-columns: 1fr;
+}
+
 .filters {
   display: flex;
   flex-wrap: wrap;
